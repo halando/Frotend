@@ -1,0 +1,12 @@
+<h1>hello</h1>
+<p>{{title}} </p>
+<div>{{tomb}}</div>
+<div>{{tomb[3]}}</div>
+<hr>
+<div *ngFor= "let nev of tomb">
+  <ng-container *ngIf = "nev=='Béla'; else szemes">Szemkilövető Józsa</ng-container>
+  <ng-template #szemes>
+    {{nev}} - <span>jó ember</span>
+
+  </ng-template>
+</div>
